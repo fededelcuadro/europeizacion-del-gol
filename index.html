@@ -19,18 +19,27 @@
   }
   body { font-family: 'Lora', Georgia, serif; background: var(--bg); color: var(--ink); }
 
-/* HERO con filtro oscuro */
+/* HERO ocupando casi toda la pantalla */
   .hero {
-    /* El degradado va primero: de negro 60% a negro 60% */
+    /* Altura dinámica: 90% del alto de la ventana */
+    min-height: 90vh; 
+
+    /* Usamos Flexbox para centrar el contenido verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido de arriba a abajo */
+    
+    /* Imagen de fondo con el filtro oscuro (Opción 1 anterior) */
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                       url('https://lh7-rt.googleusercontent.com/sitesz/AClOY7oE6oBZZZGWhJgOcKlc8X0D3j2pKeO1RbbTtfMW6x0b2XUPLjs7uOIy-5S3NVLXYwxeZhKwjqaKnBWaNMnXnJtdmaU6H4rGPyMlsP48sLl_26BpkISNL9qjDathnkf4ZbtB2EZhngND1vQVXdMXi7N50szYw4QdGCOuXzcmS3Iy3_dJs1K5=s2048?key=cKyuOUL1Q0MsONK4iIGG2Q');
-    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--navy);
+
     color: white;
-    padding: 4rem 2rem 3.5rem;
+    padding: 2rem; /* Reducimos el padding fijo ya que el alto lo da el min-height */
+    box-sizing: border-box;
   }
   .oscuro {filter: brightness(80%);}
   .hero-inner { max-width: 780px; margin: 0 auto; }
