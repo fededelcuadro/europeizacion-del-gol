@@ -19,8 +19,20 @@
   }
   body { font-family: 'Lora', Georgia, serif; background: var(--bg); color: var(--ink); }
 
-  /* HERO */
-  .hero { background: var(--navy); color: white; padding: 4rem 2rem 3.5rem; }
+/* HERO con filtro oscuro */
+  .hero {
+    /* El degradado va primero: de negro 60% a negro 60% */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                      url('https://lh7-rt.googleusercontent.com/sitesz/AClOY7oE6oBZZZGWhJgOcKlc8X0D3j2pKeO1RbbTtfMW6x0b2XUPLjs7uOIy-5S3NVLXYwxeZhKwjqaKnBWaNMnXnJtdmaU6H4rGPyMlsP48sLl_26BpkISNL9qjDathnkf4ZbtB2EZhngND1vQVXdMXi7N50szYw4QdGCOuXzcmS3Iy3_dJs1K5=s2048?key=cKyuOUL1Q0MsONK4iIGG2Q');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--navy);
+    color: white;
+    padding: 4rem 2rem 3.5rem;
+  }
+  .oscuro {filter: brightness(80%);}
   .hero-inner { max-width: 780px; margin: 0 auto; }
   .kicker {
     font-family: 'DM Mono', monospace;
@@ -121,7 +133,7 @@
 </head>
 <body>
 
-<header class="hero">
+<header class="hero" style="">
   <div class="hero-inner">
     <div class="kicker">Mundiales 1930–2022</div>
     <h1>La <em>Europeización</em> del Gol</h1>
