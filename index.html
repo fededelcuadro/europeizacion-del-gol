@@ -128,6 +128,49 @@
   .caption-text { font-family: 'Lora', serif; font-size: 0.92rem; color: var(--muted); line-height: 1.7; }
   .caption-text strong { color: var(--navy); font-weight: 600; }
 
+   .pull-quote-section {
+    background-color: #1c1c1c; /* Un gris casi negro, muy elegante */
+    color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .pull-quote {
+    font-family: 'Lora', serif; /* Única fuente */
+    font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 850px;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  /* Usamos Lora en negrita para resaltar */
+  .pull-quote strong {
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  /* Usamos Lora en cursiva y mayúsculas para el énfasis */
+  .pull-quote em {
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .quote-mark {
+    font-family: 'Lora', serif;
+    font-size: 4rem;
+    line-height: 0.5;
+    color: rgba(255, 255, 255, 0.3); /* Un toque sutil para las comillas */
+  }
+
+
   footer {
     text-align: center;
     padding: 2rem;
@@ -165,6 +208,14 @@
 </header>
 <div class="accent-bar"></div>
 
+<section class="pull-quote-section">
+  <div class="quote-mark">"</div>
+  <h2 class="pull-quote">
+    La <strong>Conmebol</strong>, pese a una ventaja temprana, es superada en <em>CANTIDAD DE GOLES</em> por la <strong>UEFA</strong> con el correr del tiempo
+  </h2>
+  <div class="quote-mark">"</div>
+</section>
+ 
 <main>
 
   <!-- 01 MAPA -->
